@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package channel;
+option go_package = ".;api";
+
+
+service ChannelService{
+  rpc ListChannels(ListChannelsRequest) returns (ListChannelsResponse){}
+}
+
+message ListChannelsRequest {}
+message ListChannelsResponse {
+  repeated Channel items = 1;
+}
+
+message Channel {
+  string name = 1;
+  string createdBy = 2;
+  bool private = 3;
+}

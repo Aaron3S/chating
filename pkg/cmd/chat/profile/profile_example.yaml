@@ -1,0 +1,17 @@
+servers:
+  - name: "beijing"
+    url: "127.0.0.1:8080"
+    channel: "default"
+  - name: "shanghai"
+    url: "127.0.0.1:8081"
+    channel: "default"
+users:
+  - name: "zhang"
+  - name: "li"
+
+contexts:
+  - name: "zhang@beijing"
+    user: "zhang"
+    server: "beijing"
+
+currentContext: "zhang@beijing"
